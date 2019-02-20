@@ -38,7 +38,7 @@ def haplogen(args):
     """Generate separate FASTA files for each chromosome copy."""
 
     if not os.path.isdir(args.output_dir):
-        os.makedirs(args.output_dir, exists_ok=True)
+        os.makedirs(args.output_dir, exist_ok=True)
 
     haplotypes_spec = ConfigParser()
     haplotypes_spec.read_file(args.spec_file)
