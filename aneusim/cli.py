@@ -62,6 +62,10 @@ def haplogen(args):
             continue
 
         ploidy = chromosome_spec.getint('ploidy')
+
+        if ploidy < 1:
+            continue
+
         logger.info("Processing reference chromosome %s with ploidy %d",
                     chromosome_id, ploidy)
 
